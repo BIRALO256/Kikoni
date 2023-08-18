@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "134975768001",
+    "project_id": "kikoni-a935a",
+    "storage_bucket": "kikoni-a935a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134975768001:android:3ed052d5fe0d5065ef1b40",
+        "android_client_info": {
+          "package_name": "com.example.kikoni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134975768001-bejnh5kqijlvarfcs053gamunsss3pqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbXGa5F-tEFfa0k2jS5KhuDMbKXn-JjN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134975768001-bejnh5kqijlvarfcs053gamunsss3pqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
