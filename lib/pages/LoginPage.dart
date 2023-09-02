@@ -18,9 +18,52 @@ class _LoginPageState extends State<LoginPage> {
   final _passwordController = TextEditingController();
 
   Future signIn() async {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
+    //show loading circle
+
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Center(
+              child: CircularProgressIndicator(
+            color: Colors.deepPurple,
+          ));
+        });
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: _emailController.text.trim(),
-        password: _passwordController.text.trim());
+        password: _passwordController.text.trim(),
+      );
+
+      /// this line below having pop() works in the way that after logingin the cirrcularProgressIndicator goes away
+
+      Navigator.of(context).pop();
+    } catch (error) {
+      // Close the loading dialog
+      Navigator.of(context).pop();
+
+      // Handle different error scenarios and display a Snackbar
+      String errorMessage = "An error occurred";
+
+      if (error is FirebaseAuthException) {
+        switch (error.code) {
+          case "user-not-found":
+            errorMessage = "User does not exist.";
+            break;
+          case "wrong-password":
+            errorMessage = "Wrong password.";
+            break;
+          // Add more error cases as needed
+          default:
+            errorMessage = "An error occurred: ${error.code}";
+        }
+      }
+
+      // Display a Snackbar with the error message
+      final snackBar = SnackBar(
+        content: Text(errorMessage),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
   }
 
   @override

@@ -19,7 +19,11 @@ class _HomePageState extends State<HomePage> {
 
 //get docID
   Future getDocIDs() async {
-    await FirebaseFirestore.instance.collection("Users").get().then(
+    await FirebaseFirestore.instance
+        .collection("Users")
+        .orderBy('age', descending: true)
+        .get()
+        .then(
           (snapshot) => snapshot.docs.forEach((Document) {
             print(Document.reference);
             docID.add(Document.reference.id);
@@ -38,6 +42,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
         title: Text(
           User.email!,
           style: TextStyle(fontSize: 16),
