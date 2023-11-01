@@ -84,17 +84,17 @@ class _RegisterPageState extends State<RegisterPage> {
                 //   Icons.construction,
                 //   size: 70,
                 // ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
                   "Hello There",
                   style: GoogleFonts.bebasNeue(fontSize: 32),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
-                Text(
+                const Text(
                   "Register below with your details!",
                   style: TextStyle(
                     fontSize: 17,
@@ -108,67 +108,67 @@ class _RegisterPageState extends State<RegisterPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: const EdgeInsets.only(left: 20),
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(12)),
                     child: TextField(
                       controller: _emailController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none, hintText: 'Email'),
                     ),
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 //email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: const EdgeInsets.only(left: 20),
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(12)),
                     child: TextField(
                       controller: _firstnameController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none, hintText: 'First Name'),
                     ),
                   ),
                 ),
 
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 //last name textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: const EdgeInsets.only(left: 20),
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(12)),
                     child: TextField(
                       controller: _lastnameController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none, hintText: 'Last Name'),
                     ),
                   ),
                 ),
 
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 //last name textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: const EdgeInsets.only(left: 20),
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(12)),
                     child: TextField(
                       controller: _ageController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none, hintText: 'Age'),
                     ),
                   ),
@@ -177,8 +177,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    margin: EdgeInsets.only(top: 5),
-                    padding: EdgeInsets.only(left: 20),
+                    margin: const EdgeInsets.only(top: 5),
+                    padding: const EdgeInsets.only(left: 20),
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
                         border: Border.all(color: Colors.white),
@@ -186,7 +186,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: TextField(
                       controller: _passwordController,
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none, hintText: 'Password'),
                     ),
                   ),
@@ -198,8 +198,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    margin: EdgeInsets.only(top: 5),
-                    padding: EdgeInsets.only(left: 20),
+                    margin: const EdgeInsets.only(top: 5),
+                    padding: const EdgeInsets.only(left: 20),
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
                         border: Border.all(color: Colors.white),
@@ -207,14 +207,14 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: TextField(
                       controller: _confirmpasswordController,
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Confirm Password'),
                     ),
                   ),
                 ),
                 //sign in button
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Padding(
@@ -226,7 +226,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         decoration: BoxDecoration(
                             color: Colors.deepPurple,
                             borderRadius: BorderRadius.circular(12)),
-                        child: Center(
+                        child: const Center(
                             child: Text(
                           "sign Up",
                           style: TextStyle(
@@ -236,23 +236,23 @@ class _RegisterPageState extends State<RegisterPage> {
                         ))),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 //A member? register now
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "I am a memeber",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     GestureDetector(
                       onTap: widget.showLoginPage,
-                      child: Text(
+                      child: const Text(
                         "Login Now",
                         style: TextStyle(
                             color: Colors.blue, fontWeight: FontWeight.bold),
