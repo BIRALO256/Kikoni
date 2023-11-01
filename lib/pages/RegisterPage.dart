@@ -38,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
           email: _emailController.text.trim(),
           password: _passwordController.text.trim());
     }
-    ;
+    
     //add user details
     addUserDetail(
         _firstnameController.text.trim(),
@@ -100,7 +100,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     fontSize: 17,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
 
