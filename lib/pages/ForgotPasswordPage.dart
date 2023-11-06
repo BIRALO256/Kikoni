@@ -22,15 +22,15 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     try {
       await FirebaseAuth.instance
           .sendPasswordResetEmail(email: _emailController.text.trim());
+      // ignore: use_build_context_synchronously
       showDialog(
           context: context,
           builder: (context) {
-            return AlertDialog(
+            return const AlertDialog(
               content: Text("password link sent! check your email"),
             );
           });
     } on FirebaseAuthException catch (e) {
-      print(e);
       showDialog(
           context: context,
           builder: (context) {
@@ -51,32 +51,32 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25),
             child: Text(
               "Enter your Email for a password recovery link",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           //email textfield
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Container(
-              padding: EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(left: 20),
               decoration: BoxDecoration(
                   color: Colors.grey[200],
                   border: Border.all(color: Colors.white),
                   borderRadius: BorderRadius.circular(12)),
               child: TextField(
                 controller: _emailController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     border: InputBorder.none, hintText: 'Email'),
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           MaterialButton(
             onPressed: () => passwordReset(),
             child: Text("Reset Password"),
