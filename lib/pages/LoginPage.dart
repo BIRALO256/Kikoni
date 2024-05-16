@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
     showDialog(
         context: context,
         builder: (context) {
-          return Center(
+          return const Center(
               child: CircularProgressIndicator(
             color: Colors.deepPurple,
           ));
@@ -84,44 +84,44 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 //greetings
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Icon(
+                const Icon(
                   Icons.construction,
                   size: 70,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Text(
                   "Hello Again!",
                   style: GoogleFonts.bebasNeue(fontSize: 32),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
-                Text(
+                const Text(
                   "Welcome back to Kikoni, been missed!",
                   style: TextStyle(
                     fontSize: 20,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 //email textfield
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: const EdgeInsets.only(left: 20),
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(12)),
                     child: TextField(
                       controller: _emailController,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none, hintText: 'Email'),
                     ),
                   ),
@@ -130,8 +130,8 @@ class _LoginPageState extends State<LoginPage> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: Container(
-                    margin: EdgeInsets.only(top: 10),
-                    padding: EdgeInsets.only(left: 20),
+                    margin: const EdgeInsets.only(top: 10),
+                    padding: const EdgeInsets.only(left: 20),
                     decoration: BoxDecoration(
                         color: Colors.grey[200],
                         border: Border.all(color: Colors.white),
@@ -139,12 +139,12 @@ class _LoginPageState extends State<LoginPage> {
                     child: TextField(
                       controller: _passwordController,
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none, hintText: 'Password'),
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Padding(
@@ -158,12 +158,12 @@ class _LoginPageState extends State<LoginPage> {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return ForgotPasswordPage();
+                                return const ForgotPasswordPage();
                               },
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Forgot password?",
                           style: TextStyle(
                               color: Colors.blue, fontWeight: FontWeight.bold),
@@ -173,7 +173,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 //sign in button
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Padding(
@@ -185,7 +185,7 @@ class _LoginPageState extends State<LoginPage> {
                         decoration: BoxDecoration(
                             color: Colors.deepPurple,
                             borderRadius: BorderRadius.circular(12)),
-                        child: Center(
+                        child: const Center(
                             child: Text(
                           "sign in",
                           style: TextStyle(
@@ -195,23 +195,23 @@ class _LoginPageState extends State<LoginPage> {
                         ))),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 //not a member? register now
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Not a memeber?",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     GestureDetector(
                       onTap: widget.showRegisterPage,
-                      child: Text(
+                      child: const Text(
                         "Register Now",
                         style: TextStyle(
                             color: Colors.blue, fontWeight: FontWeight.bold),
