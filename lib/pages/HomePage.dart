@@ -45,21 +45,21 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.deepPurple,
         title: Text(
           User.email!,
-          style: TextStyle(fontSize: 16),
+          style: const TextStyle(fontSize: 16),
         ),
         actions: [
           GestureDetector(
               onTap: () {
                 FirebaseAuth.instance.signOut();
               },
-              child: Icon(Icons.logout))
+              child: const Icon(Icons.logout))
         ],
       ),
       body: SafeArea(child: Builder(builder: (context) {
         return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Expanded(
               child: FutureBuilder(
                   future: getDocIDs(),
